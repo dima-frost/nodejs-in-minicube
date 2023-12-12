@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: nodejs-app
-        image: "dimafrost/node-app:v1.0.0"
+        image: "dimafrost/nodejs-app:v1.0.0"
         ports:
           - containerPort: 3000
 ---
