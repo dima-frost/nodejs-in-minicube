@@ -16,7 +16,7 @@ jobs:
       run: |
           export SHELL=/bin/bash
           eval $(minikube -p minikube docker-env)
-          docker build -f ./Dockerfile -t dimafrost/nodejs-app:v1.0.0 .
+          docker build . -f ./Dockerfile -t dimafrost/nodejs-app:v1.0.0
           echo -n "verifying images:"
           docker images         
     - name: Deploy to minikube
@@ -26,4 +26,5 @@ jobs:
       run: |
           kubectl get pods -A
           minikube service list
+          sleep 20
           minikube service nodejs-app --url
