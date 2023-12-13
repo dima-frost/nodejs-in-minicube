@@ -19,6 +19,7 @@ spec:
       containers:
       - name: nodejs-app
         image: "dimafrost/nodejs-app:v1.0.0"
+        imagePullPolicy: Never
         ports:
           - containerPort: 3000
 ---
